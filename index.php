@@ -5,18 +5,18 @@
 
 	/* Paramètres */
 	$bdd_fichier = 'labyrinthe.db';	//Fichier de la base de données
-	$type = 'vide';			//Type de couloir à lister
+	# $type = 'vide';			//Type de couloir à lister
 	
 
 	$sqlite = new SQLite3($bdd_fichier);		//On ouvre le fichier de la base de données
 	
 	/* Instruction SQL pour récupérer la liste des pieces adjacentes à la pièce paramétrée */
-	$sql = 'SELECT couloir.id, couloir.type FROM couloir WHERE type=:type';
+	$sql = 'SELECT couloir.id, couloir.type FROM couloir ';/* WHERE type=:type */
 	
 	
 	/* Préparation de la requete et de ses paramètres */
 	$requete = $sqlite -> prepare($sql);	
-	$requete -> bindValue(':type', $type, SQLITE3_TEXT);
+	# $requete -> bindValue(':type', $type, SQLITE3_TEXT);
 	
 	$result = $requete -> execute();	//Execution de la requête et récupération du résultat
 
@@ -39,4 +39,5 @@
 	
 	$sqlite -> close();			//On ferme bien le fichier de la base de données avant de terminer!
 	
+
 ?>
