@@ -1,0 +1,142 @@
+/* GLOBAL */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #1f1f2e, #2e3147);
+    color: #e6e6e6;
+    text-align: center;
+}
+
+
+/* Boîte principale du couloir */
+
+.couloir-box {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 25px;
+    margin: 40px auto;
+    width: 70%;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+}
+
+
+/* Titres */
+
+h1 {
+    font-size: 2.4em;
+    color: #b8c7ff;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+h2 {
+    color: #9fb4ff;
+    margin-top: 30px;
+    font-size: 1.7em;
+}
+
+
+/* Texte */
+
+p {
+    font-size: 1.15em;
+}
+
+
+/* LISTE DES SORTIES */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 18px;
+    margin: 12px auto;
+    width: 60%;
+    border-radius: 12px;
+    transition: 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+li:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* BOUTONS */
+
+button {
+    padding: 10px 22px;
+    background: #4a7fff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.25s;
+    margin-top: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background: #2e63e1;
+}
+
+button:disabled {
+    background: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+/* Bouton "Abandonner" */
+
+form[action="index.php"] button {
+    background: #e74c3c;
+}
+
+form[action="index.php"] button:hover {
+    background: #c0392b;
+}
+
+
+/* Labels du type de passage */
+
+.passage-type {
+    display: inline-block;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+/* Couleurs selon le type */
+
+.passage-normal {
+    background: rgba(0, 255, 110, 0.2);
+    color: #7dffb5;
+    border: 1px solid rgba(0, 255, 110, 0.4);
+}
+
+.passage-grille {
+    background: rgba(0, 200, 255, 0.25);
+    color: #8feaff;
+    border: 1px solid rgba(0, 200, 255, 0.4);
+}
+
+.passage-porte {
+    background: rgba(255, 180, 0, 0.25);
+    color: #ffdc7f;
+    border: 1px solid rgba(255, 180, 0, 0.4);
+}
