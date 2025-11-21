@@ -1,1 +1,39 @@
 # Labyrinthe
+
+labyrinthe/
+
+│
+
+├── index.php                # Page d'accueil du jeu
+
+├── jeu.php                  # Page principale du jeu
+
+├── fin.php                  # Page de fin de partie
+
+│
+
+├── includes/
+
+│   ├── connexion.php        # Connexion à la base SQLite
+
+│   ├── fonctions.php        # Fonctions réutilisables du jeu
+
+│
+
+├── assets/
+
+│   ├── css/
+
+│   │   └── style.css        # Feuille de style du jeu
+
+│   └── img/
+
+│       └── ...              # Images (clés, portes, etc.)
+
+│
+
+├── labyrinthe.db            # Base de données SQLite
+
+│
+
+└── README.md                # Manuel ou documentation
